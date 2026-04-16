@@ -1,0 +1,27 @@
+:root {
+    --cor-principal: #FF4E02;
+    --cor-secudaria: #F48859;
+    --cor-neutra-escuro: #1c1c1c;
+    --cor-neutra-claro: #F5F0E8;
+    --cinza-c1: #3D3D3D;
+    --cinza-c2: #9E9E9E;
+}
+
+.cor-principal {
+    color: var(--cor-principal)
+}
+.cor-secundaria {
+    color: var(--cor-secudaria)
+}
+.cor-neutra-escuro {
+    color: var(--cor-neutra-escuro)
+}
+.cor-neutra-calro {
+    color: var(--cor-neutra-claro)
+}
+.cinza-c1 {
+    color: var(--cinza-c1)
+}
+.cinza-c2 {
+    color: var(--cinza-c2)
+}
