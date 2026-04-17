@@ -23,7 +23,6 @@ ul, li, a {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    color: var(--cor-neutra-escuro);
     padding-bottom: 4px;
     font: 700 1rem/1.5 "syne", sans-serif;
     transition: color 0.3s ease;
