@@ -3,8 +3,8 @@
     --cor-secudaria: #F48859;
     --cor-neutra-escuro: #1c1c1c;
     --cor-neutra-claro: #F5F0E8;
-    --cinza-c1: #3D3D3D;
-    --cinza-c2: #9E9E9E;
+    --complementar-c1: #3D3D3D;
+    --complementar-c2: #9E9E9E;
 }
 
 .cor-principal {
@@ -19,9 +19,9 @@
 .cor-neutra-claro {
     color: var(--cor-neutra-claro)
 }
-.cinza-c1 {
-    color: var(--cinza-c1)
+.complementar-c1 {
+    color: var(--complementar-c1)
 }
-.cinza-c2 {
-    color: var(--cinza-c2)
+.complementar-c2 {
+    color: var(--complementar-c2)
 }
