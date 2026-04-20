@@ -1,181 +1,233 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor Blum</title>
-    <meta name="description" content="Seu Negócio Merece Ser Encontrado na Internet
-Transformo visitantes perdidos em clientes reais com landing pages e sites que convertem 24 horas por dia — sem firulas técnicas, só resultados que você pode medir">
+    <title>Victor Blum — Desenvolvedor & Designer UX/UI</title>
+    <meta name="description" content="Especialista em landing pages e sites institucionais que transformam visitantes em clientes reais.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/utilitarios/mobile.css">
 </head>
 
 <body>
     <main id="home">
+
+        <!-- ═══ HEADER ═══ -->
         <header>
             <div class="container header-bg">
-            <p class="font-menus"><a href="#home"> Victor Blum</a></p>
-            <div class="menus-header">
-                <nav>
-                    <ul>
-                        <li><a href="#sobre" class="font-menus">Sobre</a></li>
-                        <li><a href="#servicos" class="font-menus">Serviços</a></li>
-                        <li><a href="#contato" class="font-menus">Contato</a></li>
-                    </ul>
-                </nav>
-                <a href="https://wa.me/5541996309392" class="button">Conversar <img src="/css/assets/seta.svg" alt=""></a>
-            </div>
+                <p class="font-menus"><a href="#home">Victor Blum</a></p>
+                <div class="menus-header">
+                    <nav class="desktop-nav">
+                        <ul>
+                            <li><a href="#sobre" class="font-menus">Sobre</a></li>
+                            <li><a href="#servicos" class="font-menus">Serviços</a></li>
+                            <li><a href="#contato" class="font-menus">Contato</a></li>
+                        </ul>
+                    </nav>
+                    <a href="https://wa.me/5541996309392" class="button" target="_blank" rel="noopener">Conversar <img src="/css/assets/seta.svg" alt=""></a>
+                    <button id="menu-toggle" class="hamburger" aria-label="Abrir menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
             </div>
         </header>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu">
+            <nav>
+                <ul>
+                    <li><a href="#sobre" class="font-h1">Sobre</a></li>
+                    <li><a href="#servicos" class="font-h1">Serviços</a></li>
+                    <li><a href="#projetos" class="font-h1">Projetos</a></li>
+                    <li><a href="#contato" class="font-h1">Contato</a></li>
+                </ul>
+            </nav>
+            <a href="https://wa.me/5541996309392" class="font-menus mobile-menu-cta" target="_blank" rel="noopener">↗ Iniciar projeto</a>
+        </div>
+
+        <!-- ═══ HERO ═══ -->
         <section class="container hero-bg" id="hero">
-            <p class="font-body ">Disponível para trabalho</p>
-            <h1 class="font-display ">Especialista em Landing Pages e Sites Institucionais</h1>
-            <p class="font-body ">Eu crio landing pages e sites institucionais que fazem o que todo negócio precisa: transformar visitantes em contatos reais — sem depender de sorte ou achismo.</p>
-            <a href="https://wa.me/5541996309392" class="button ">Iniciar pojeto<img src="/css/assets/seta.svg" alt=""></a>
+            <canvas id="hero-canvas"></canvas>
+            <p class="font-body">Disponível para trabalho</p>
+            <h1 class="font-display">Especialista em Landing Pages e Sites Institucionais</h1>
+            <div class="hero-meta">
+                <p class="font-body">Transformo visitantes perdidos em clientes reais com páginas que convertem — sem depender de sorte ou achismo.</p>
+                <a href="https://wa.me/5541996309392" class="button" target="_blank" rel="noopener">Iniciar projeto <img src="/css/assets/seta.svg" alt=""></a>
+            </div>
         </section>
+
+        <!-- ═══ DETALHE / MARQUEE ═══ -->
         <section class="detalhe" id="detalhe">
             <div class="container">
-            <img src="/css/assets/Star.svg" alt="">
-            <p class="font-body ">Alcance</p>
-            <img src="/css/assets/Star.svg" alt="">
-            <p class="font-body ">Performance</p>
-            <img src="/css/assets/Star.svg" alt="">
-            <p class="font-body ">Estratégia</p>
-            <img src="/css/assets/Star.svg" alt="">
+                <img src="/css/assets/Star.svg" alt="">
+                <p class="font-body">Alcance</p>
+                <img src="/css/assets/Star.svg" alt="">
+                <p class="font-body">Performance</p>
+                <img src="/css/assets/Star.svg" alt="">
+                <p class="font-body">Estratégia</p>
+                <img src="/css/assets/Star.svg" alt="">
+                <p class="font-body">Conversão</p>
+                <img src="/css/assets/Star.svg" alt="">
+                <p class="font-body">Resultados</p>
+                <img src="/css/assets/Star.svg" alt="">
+                <p class="font-body">Experiência</p>
+                <img src="/css/assets/Star.svg" alt="">
             </div>
         </section>
+
+        <!-- ═══ DORES ═══ -->
         <section class="Dores container" id="dores">
-            <div class="card-dor1"> 
-            <h4 class="font-h4 aro">Você investe em tráfego, mas os leads não aparecem. Onde estão errando?</h4>
-            <p class="font-body aro">Uma landing page mal estruturada afasta quem chegou pronto para comprar. Eu construo páginas pensadas para capturar, convencer e converter — do primeiro scroll até o clique no botão.</p>
-            <a href="https://wa.me/5541996309392" class="button aro">Iniciar pojeto<img src="/css/assets/seta.svg" alt=""></a>
-            <p class="font-display complementar-c1">01</p>
+            <div class="card-dor1">
+                <h4 class="font-h4">Você investe em tráfego, mas os leads não aparecem?</h4>
+                <p class="font-body">Uma landing page mal estruturada afasta quem chegou pronto para comprar. Construo páginas pensadas para capturar, convencer e converter — do primeiro scroll até o clique no botão.</p>
+                <a href="https://wa.me/5541996309392" class="button" target="_blank" rel="noopener">Iniciar projeto <img src="/css/assets/seta.svg" alt=""></a>
+                <p class="font-display">01</p>
             </div>
-
-             <div class="card-dor2"> 
-            <h4 class="font-h4 aro">Seu site parece profissional, mas não transmite confiança de verdade?</h4>
-            <p class="font-body aro">Design bonito não basta. O que gera confiança é uma comunicação visual consistente, hierarquia clara e uma experiência que guia o visitante — não que o confunde.</p>
-            <a href="https://wa.me/5541996309392" class="button aro">Iniciar pojeto<img src="/css/assets/seta.svg" alt=""></a>
-            <p class="font-display complementar-c1">02</p>
+            <div class="card-dor2">
+                <h4 class="font-h4">Seu site parece profissional, mas não transmite confiança de verdade?</h4>
+                <p class="font-body">Design bonito não basta. O que gera confiança é comunicação visual consistente, hierarquia clara e uma experiência que guia o visitante — não que o confunde.</p>
+                <a href="https://wa.me/5541996309392" class="button" target="_blank" rel="noopener">Iniciar projeto <img src="/css/assets/seta.svg" alt=""></a>
+                <p class="font-display">02</p>
             </div>
-
-             <div class="card-dor3"> 
-            <h4 class="font-h4 aro">Já tentou fazer sozinho (ou com alguém barato) e o resultado não veio?</h4>
-            <p class="font-body aro">Existem sites que existem e sites que trabalham por você. Eu entrego o segundo tipo: desenvolvido com estratégia, testado, e pronto para gerar resultado desde o primeiro dia no ar.</p>
-            <a href="https://wa.me/5541996309392" class="button aro">Iniciar pojeto<img src="/css/assets/seta.svg"  alt=""></a>
-            <p class="font-display complementar-c1">03</p>
+            <div class="card-dor3">
+                <h4 class="font-h4">Já tentou fazer sozinho e o resultado não veio?</h4>
+                <p class="font-body">Existem sites que existem e sites que trabalham por você. Entrego o segundo tipo: desenvolvido com estratégia no Figma, testado em dispositivos reais, pronto para gerar resultado.</p>
+                <a href="https://wa.me/5541996309392" class="button" target="_blank" rel="noopener">Iniciar projeto <img src="/css/assets/seta.svg" alt=""></a>
+                <p class="font-display">03</p>
             </div>
         </section>
+
+        <!-- ═══ SERVIÇOS ═══ -->
         <section class="servicos" id="servicos">
             <div class="container">
-            <h1 class="font-display">Estratégia, design e resultado</h1>
-            <p class="font-body">Foco em fazer o seu negócio ser encontrado, lembrado e escolhido.</p>
+                <h1 class="font-display">Estratégia, design e resultado</h1>
+                <p class="font-body">Foco em fazer o seu negócio ser encontrado, lembrado e escolhido.</p>
             </div>
             <article class="card-servicos-bg">
                 <div class="container">
                     <h4 class="font-h4">Landing Page de Alta Conversão</h4>
-                    <p class="font-body"> Página única, criada com um objetivo específico: transformar visitante em lead. Ideal para campanhas, captação de clientes ou interessados. Cada elemento tem uma função. Nada é decorativo.</p>
+                    <p class="font-body">Página única criada com um objetivo específico: transformar visitante em lead. Ideal para campanhas, captação de pacientes ou geração de oportunidades. Cada elemento tem uma função — nada é decorativo. Desenvolvida no Figma, codificada à mão, otimizada para Google e integrada ao seu CRM.</p>
                     <h3 class="font-h3">Landing page</h3>
-                    <a href="https://wa.me/5541996309392" class="button aro">Saiba Mais<img src="/css/assets/seta.svg"  alt=""></a>
+                    <a href="https://wa.me/5541996309392" class="button" target="_blank" rel="noopener">Saiba mais <img src="/css/assets/seta.svg" alt=""></a>
                 </div>
-                <p class="font-display complementar-c1 container">01</p>
+                <p class="font-display container">01</p>
             </article>
             <article class="card-servicos-bg">
                 <div class="container">
                     <h4 class="font-h4">Site Institucional que Vende Autoridade</h4>
-                    <p class="font-body"> Para empresas que precisam de uma presença digital à altura do serviço que entregam. Um site que apresenta, convence e já inicia o contato — tudo no mesmo lugar.</p>
-                    <h3 class="font-h3">Site Institucional</h3>
-                    <a href="https://wa.me/5541996309392" class="button aro">Saiba Mais<img src="/css/assets/seta.svg"  alt=""></a>
+                    <p class="font-body">Para clínicas, escritórios e empresas que precisam de uma presença digital à altura do serviço que entregam. Um site que apresenta, convence e já inicia o contato — tudo no mesmo lugar. Design responsivo, velocidade real, SEO on-page e entrega via Vercel ou servidor próprio.</p>
+                    <h3 class="font-h3">Site institucional</h3>
+                    <a href="https://wa.me/5541996309392" class="button" target="_blank" rel="noopener">Saiba mais <img src="/css/assets/seta.svg" alt=""></a>
                 </div>
-                <p class="font-display complementar-c1 container">02</p>
+                <p class="font-display container">02</p>
             </article>
         </section>
+
+        <!-- ═══ PROJETOS ═══ -->
         <section class="projetos container" id="projetos">
-            <h1 class="font-display">Estratégia, design e resultado</h1>
+            <h1 class="font-display">Projetos recentes</h1>
             <article class="projeto-1">
-            <div>
-               <p class="font-display complementar-c1 container">01</p> 
-               <h1 class="font-h1">Aurora</h1>
-               <p class="font-body complementar-c2">Landing page</p>
-               <p class="font-body">Página focada na captação de pacientes para consultas particulares. Estrutura criada para gerar agendamentos direto pelo WhatsApp, com comunicação humanizada e design que transmite cuidado.</p>
-               <a href="" class="button aro">Ver Projeto<img src="/css/assets/seta.svg"  alt=""></a>
-            </div>
-            <img src="/css/assets/projeto-1.png" alt="">
+                <div>
+                    <p class="font-body complementar-c2">Landing page</p>
+                    <h1 class="font-h1">Aurora Saúde</h1>
+                    <p class="font-body">Captação de pacientes para consultas particulares. Estrutura criada para gerar agendamentos direto pelo WhatsApp, com comunicação humanizada e design que transmite cuidado. +38% de taxa de conversão em 30 dias.</p>
+                    <a href="" class="button">Ver projeto <img src="/css/assets/seta.svg" alt=""></a>
+                </div>
+                <img src="/css/assets/projeto-1.png" alt="Projeto Aurora Saúde" loading="lazy">
             </article>
             <article class="projeto-2">
-            <div>
-               <p class="font-display complementar-c1 container">02</p> 
-               <h1 class="font-h1">Bickraft</h1>
-               <p class="font-body complementar-c2">Site institucional</p>
-               <p class="font-body"> Site desenvolvido para um escritório especializado em direito empresarial. O desafio: parecer acessível sem perder a seriedade. O resultado: mais consultas iniciais e mais autoridade percebida.</p>
-               <a href="" class="button aro">Ver Projeto<img src="/css/assets/seta.svg"  alt=""></a>
-            </div>
-            <img src="/css/assets/projeto-2.png" alt="">
+                <div>
+                    <p class="font-body complementar-c2">Site institucional</p>
+                    <h1 class="font-h1">Bickraft</h1>
+                    <p class="font-body">Site para escritório especializado em direito empresarial. O desafio: parecer acessível sem perder seriedade. Resultado: aumento de 60% nas consultas iniciais e autoridade percebida pelo público-alvo certo.</p>
+                    <a href="" class="button">Ver projeto <img src="/css/assets/seta.svg" alt=""></a>
+                </div>
+                <img src="/css/assets/projeto-2.png" alt="Projeto Bickraft" loading="lazy">
             </article>
             <article class="projeto-3">
-            <div>
-               <p class="font-display complementar-c1 container">03</p> 
-               <h1 class="font-h1">Em breve</h1>
-               <p class="font-body complementar-c2">Landing page</p>
-               <p class="font-body"> Página criada para captação de leads qualificados para um empreendimento específico. Foco em conversão rápida, com copy direto e formulário estratégico integrado ao CRM da empresa.</p>
-               <a href="" class="button aro">Ver Projeto<img src="/css/assets/seta.svg"  alt=""></a>
-            </div>
-            <img src="/css/assets/projeto-2.png" alt="">
+                <div>
+                    <p class="font-body complementar-c2">Landing page</p>
+                    <h1 class="font-h1">Em breve</h1>
+                    <p class="font-body">Captação de leads qualificados para empreendimento imobiliário. Foco em conversão rápida com copy direto e formulário estratégico integrado ao CRM da empresa. Disponível em breve.</p>
+                    <a href="" class="button">Em andamento <img src="/css/assets/seta.svg" alt=""></a>
+                </div>
+                <img src="/css/assets/projeto-3.png" alt="Projeto em andamento" loading="lazy">
             </article>
         </section>
+
+        <!-- ═══ PROCESSO ═══ -->
         <section class="processo" id="processo">
             <h1 class="font-display container">Trabalho com foco em eficiência e qualidade</h1>
             <article class="passo-1">
-                <h3 class="font-h2 aro">Briefing e pesquisa</h3>
-                <p class="font-body aro"> Tudo começa com perguntas certas. Quem é seu cliente ideal? O que ele precisa ver para confiar em você? Essa etapa define a estratégia que vai guiar cada decisão do projeto.</p>
-                <p class="font-display complementar-c1 container">01</p>
+                <h3 class="font-h2">Briefing e pesquisa</h3>
+                <p class="font-body">Tudo começa com perguntas certas. Quem é seu cliente ideal? O que ele precisa ver para confiar em você? Essa etapa define a estratégia que guia cada decisão — diferencial de posicionamento, arquitetura de informação, hierarquia visual.</p>
+                <p class="font-display container">01</p>
             </article>
             <article class="passo-2">
-                <h3 class="font-h2 aro">Protótipo no Figma</h3>
-                <p class="font-body aro"> Antes de escrever uma linha de código, você vê o projeto ganhar forma. Ajustamos layout, hierarquia e fluxo até que tudo faça sentido — e só então avançamos.</p>
-                <p class="font-display complementar-c1 container">02</p>
+                <h3 class="font-h2">Protótipo no Figma</h3>
+                <p class="font-body">Antes de escrever uma linha de código, você vê o projeto ganhar forma. Ajustamos layout, componentes e fluxo de navegação até que tudo faça sentido — e só então avançamos para o desenvolvimento.</p>
+                <p class="font-display container">02</p>
             </article>
             <article class="passo-3">
-                <h3 class="font-h2 aro">Desenvolvimento</h3>
-                <p class="font-body aro"> O protótipo aprovado vira um site de verdade: responsivo, rápido e otimizado. Nada de templates genéricos — cada detalhe é construído pensando na sua audiência.</p>
-                <p class="font-display complementar-c1 container">03</p>
+                <h3 class="font-h2">Desenvolvimento</h3>
+                <p class="font-body">O protótipo aprovado vira um site de verdade: HTML5 semântico, CSS3 performático e JS vanilla. Responsivo, rápido e otimizado para SEO on-page. Nada de page builders ou templates genéricos.</p>
+                <p class="font-display container">03</p>
             </article>
             <article class="passo-4">
-                <h3 class="font-h2 aro">Entrega</h3>
-                <p class="font-body aro">  Revisão final, testes em dispositivos e publicação. Você recebe o site funcionando, com orientações claras sobre o que foi entregue e como tudo funciona.</p>
-                <p class="font-display complementar-c1 container">04</p>
+                <h3 class="font-h2">Entrega e publicação</h3>
+                <p class="font-body">Revisão final, testes em dispositivos reais (iOS, Android, desktop) e publicação via Vercel ou servidor do cliente. Você recebe o site funcionando com orientações claras sobre cada entrega.</p>
+                <p class="font-display container">04</p>
             </article>
             <article class="passo-5">
-                <h3 class="font-h2 aro">Suporte</h3>
-                <p class="font-body aro">Dúvidas surgem, ajustes aparecem. Por isso ofereço suporte pós-entrega para garantir que o site continue funcionando exatamente como foi planejado.</p>
-                <p class="font-display complementar-c1 container">05</p>
+                <h3 class="font-h2">Suporte</h3>
+                <p class="font-body">Dúvidas surgem, ajustes aparecem. Por isso ofereço suporte pós-entrega para garantir que o site continue funcionando exatamente como foi planejado — e evoluindo com o seu negócio.</p>
+                <p class="font-display container">05</p>
             </article>
         </section>
+
+        <!-- ═══ SOBRE ═══ -->
         <section class="sobre container" id="sobre">
-            <h1 class="font-display ">Construo o futuro digital do seu negócio</h1>
+            <h1 class="font-display">Construo o futuro digital do seu negócio</h1>
             <p class="font-body">Comecei a me interessar por design porque queria entender por que algumas coisas simplesmente funcionam — e outras não.
+
 Essa curiosidade me levou ao desenvolvimento web, à experiência do usuário e, no fim das contas, a um lugar onde design e estratégia andam juntos.
-Hoje trabalho com negócios que dependem de confiança para fechar uma venda. E é exatamente por isso que levo a sério cada projeto: porque sei que do outro lado há um cliente com um problema real, ou tomando uma decisão importante.
-Não terceirizo, não uso templates prontos e não some depois da entrega. Sou eu em cada etapa — do briefing ao suporte.
-Se você chegou até aqui, provavelmente está procurando alguém que entenda o que precisa antes de sair criando. Esse é exatamente o tipo de parceria que eu ofereço.</p>
-        <a href="https://wa.me/5541996309392" class="button">Conversar<img src="/css/assets/seta.svg" alt=""></a>
+
+Trabalho com negócios que dependem de confiança para fechar uma venda. Exatamente por isso levo a sério cada projeto: do outro lado há um cliente com um problema real ou uma decisão importante.
+
+Não terceirizo, não uso templates e não desapareço após a entrega. Sou eu em cada etapa — do briefing ao suporte.</p>
+            <a href="https://wa.me/5541996309392" class="button" target="_blank" rel="noopener">Conversar <img src="/css/assets/seta.svg" alt=""></a>
+
+            <div class="sobre-skills">
+                <p class="sobre-skills-label">Stack & ferramentas</p>
+                <div class="sobre-tool"><span>Figma</span><span>UI Design / Prototipação</span></div>
+                <div class="sobre-tool"><span>HTML5 + CSS3</span><span>Estrutura & Estilo</span></div>
+                <div class="sobre-tool"><span>JavaScript ES6+</span><span>Interações & Animações</span></div>
+                <div class="sobre-tool"><span>Vercel / Netlify</span><span>Deploy & Hospedagem</span></div>
+                <div class="sobre-tool"><span>Google Analytics</span><span>Métricas & Performance</span></div>
+                <div class="sobre-tool"><span>SEO On-page</span><span>Indexação & Alcance</span></div>
+                <p class="sobre-quote">Design que <em>converte.</em> Código que <em>performa.</em></p>
+            </div>
         </section>
-        <section class="contato" id="contato">
-            <h1 class="font-display container">Vamos conversar sobre o seu projeto?</h1>
-            <p class="font-body container">Sem formulário longo, sem espera. Me manda uma mensagem e a gente já começa a entender o que faz sentido pra você.</p>
+
+        <!-- ═══ CONTATO ═══ -->
+        <section class="contato container" id="contato">
+            <h1 class="font-display">Vamos conversar sobre o seu projeto?</h1>
+            <p class="font-body">Sem formulário longo, sem espera. Me manda uma mensagem e a gente já começa a entender o que faz sentido pra você.</p>
             <article class="contatos">
                 <div class="form">
-                    <h4 class="font-h4">Formulario</h4>
+                    <h4 class="font-h4">Formulário</h4>
                     <p class="font-body">Preencha que eu entro em contato</p>
                     <span><img src="/css/assets/seta.svg" alt=""></span>
                 </div>
                 <div class="WhatsApp">
-                    <h4 class="font-h4">Whatsapp</h4>
-                    <p class="font-body">Respota rápida e direta.</p>
+                    <h4 class="font-h4">WhatsApp</h4>
+                    <p class="font-body">Resposta rápida e direta</p>
                     <span><img src="/css/assets/seta.svg" alt=""></span>
                 </div>
                 <div class="email">
@@ -185,34 +237,36 @@ Se você chegou até aqui, provavelmente está procurando alguém que entenda o 
                 </div>
                 <div class="instagram">
                     <h4 class="font-h4">Instagram</h4>
-                    <p class="font-body">victorblum_dev</p>
+                    <p class="font-body">@victorblum_dev</p>
                     <span><img src="/css/assets/seta.svg" alt=""></span>
                 </div>
             </article>
         </section>
+
+        <!-- ═══ FOOTER ═══ -->
         <footer>
-            <nav >
+            <nav>
                 <ul class="container">
-                    <li><a href="#home" class="font-h4 complentar-c1">Inicio</a></li>
-                    <li><a href="#servicos" class="font-h4 complentar-c1">Serviços</a></li>
-                    <li><a href="#projetos" class="font-h4 complentar-c1">Projetos</a></li>
-                    <li><a href="#sobre" class="font-h4 complentar-c1">Sobre</a></li>
-                    <li><a href="#contato" class="font-h4 complentar-c1">Contato</a></li>
+                    <li><a href="#home" class="font-menus">Início</a></li>
+                    <li><a href="#servicos" class="font-menus">Serviços</a></li>
+                    <li><a href="#projetos" class="font-menus">Projetos</a></li>
+                    <li><a href="#sobre" class="font-menus">Sobre</a></li>
+                    <li><a href="#contato" class="font-menus">Contato</a></li>
                 </ul>
             </nav>
             <div class="container">
-            <h4 class="font-h4">Vamos conversar</h4>
-            <a href="https://wa.me/5541996309392" class="font-body">+55 41 9 9630-9392</a>
-            <a href="" class="font-body">0victoralmeid@gmail.com</a>
+                <h4 class="font-h4" style="color:var(--cor-neutra-claro);">Vamos conversar</h4>
+                <a href="https://wa.me/5541996309392" class="font-body">+55 41 9 9630-9392</a>
+                <a href="mailto:0victoralmeid@gmail.com" class="font-body">0victoralmeid@gmail.com</a>
             </div>
             <div class="rodape">
-                <p class="font-body complementar-c2 container">2026 Victor Blum © Todos os direitos reservados I <a href="">Termos e condições </a> I <a href="">Politica de privacidade.</a> </p>
-                <h1 class="font-display" style="font-size: 7.5em;">VICTOR BLUM</h1>
+                <p class="font-body complementar-c1 container">2026 Victor Blum © Todos os direitos reservados &nbsp;|&nbsp; <a href="">Termos e condições</a> &nbsp;|&nbsp; <a href="">Política de privacidade</a></p>
+                <h1 class="font-display" style="font-size:15.2vw;line-height:0.88;text-transform:uppercase;letter-spacing:-0.03em;-webkit-text-stroke:1px #3D3D3D;color:var(--cor-neutra-escuro);opacity:0.15;padding:0;text-align:center;user-select:none;">VICTOR BLUM</h1>
             </div>
         </footer>
+
     </main>
 
-    <Script src="script.js"></Script>
+    <script src="script.js"></script>
 </body>
-
 </html>

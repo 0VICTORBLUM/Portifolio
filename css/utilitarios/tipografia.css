@@ -4,6 +4,7 @@
 }
 .font-h1 {
     font: 800 4rem/1.2 "syne", sans-serif;
+    text-transform: uppercase;
 }
 .font-h2 {
     font: 700 4rem/1.2 "syne", sans-serif;

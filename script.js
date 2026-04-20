@@ -6,9 +6,9 @@ cursor.style.cssText = `
     position: fixed;
     top: 0;
     left: 0;
-    width: 12px;
-    height: 12px;
-    background-color: #FF4E02;
+    width: 16px;
+    height: 16px;
+    background-color: var(--cor-principal);
     border-radius: 50%;
     pointer-events: none;
     z-index: 99999;
