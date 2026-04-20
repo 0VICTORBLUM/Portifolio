@@ -1,0 +1,99 @@
+footer {
+    background-color: var(--cor-neutra-escuro);
+    padding: 80px 0 0;
+    overflow: hidden;
+}
+
+footer > nav ul {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+
+footer > nav ul li a {
+    color: var(--complementar-c1);
+    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+footer > nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--cor-neutra-claro);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+footer > nav ul li a:hover {
+    color: var(--cor-neutra-claro);
+}
+
+footer > nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+footer > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 80px;
+}
+
+footer > div h4 {
+    margin: 0;
+    color: var(--cor-neutra-claro);
+}
+
+footer > div a {
+    color: var(--complementar-c1);
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+footer > div a:hover {
+    color: var(--cor-neutra-claro);
+}
+
+/* Rodapé */
+.rodape {
+    border-top: 1px solid var(--complementar-c1);
+    padding: 20px 0 0;
+}
+
+.rodape > .font-body {
+    margin: 0 0 0;
+    font-size: 0.85rem;
+    line-height: 1;
+    padding-bottom: 8px;
+}
+
+.rodape a {
+    color: var(--complementar-c1);
+    transition: color 0.2s ease;
+}
+
+.rodape a:hover {
+    color: var(--cor-neutra-claro);
+}
+
+.rodape > h1 {
+    margin: 0;
+    color: var(--cor-neutra-escuro);
+    font: 800 15.2vw/0.88 "syne", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    -webkit-text-stroke: 1px var(--complementar-c1);
+    display: block;
+    width: 100%;
+    text-align: center;
+    opacity: 0.15;
+    user-select: none;
+}

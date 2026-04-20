@@ -15,3 +15,5 @@
 @import url(/css/home/projetos.css);
 @import url(/css/home/servicos.css);
 @import url(/css/home/sobre.css);
+/* mobile */
+@import url(/css/utilitarios/mobile.css);

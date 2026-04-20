@@ -1,22 +1,57 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    cursor: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     background-color: var(--cor-neutra-claro);
+    -webkit-font-smoothing: antialiased;
 }
 
 ul, li, a {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     list-style: none;
     text-decoration: none;
     color: inherit;
 }
 
-.container {
-    margin: 0px 80px;
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
 }
 
-/* ========== BUTTON GLOBAL ========== */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+:focus-visible {
+    outline: 2px solid #b0ff00;
+    outline-offset: 3px;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.container {
+    margin: 0 80px;
+}
+
+@media (max-width: 768px) {
+    .container { margin: 0 24px; }
+}
+@media (max-width: 375px) {
+    .container { margin: 0 16px; }
+}
+
+/* ──────────────── BUTTON GLOBAL ──────────────── */
 
 .button {
     position: relative;
@@ -25,6 +60,7 @@ ul, li, a {
     gap: 6px;
     padding-bottom: 4px;
     font: 700 1rem/1.5 "syne", sans-serif;
+    color: var(--cor-neutra-escuro);
     transition: color 0.3s ease;
 }
 
@@ -47,15 +83,16 @@ ul, li, a {
     transition: transform 0.5s ease;
 }
 
-.button:hover {
-    color: var(--cor-principal);
-}
+.button:hover { color: var(--cor-principal); }
 
 .button:hover img {
     transform: translate(3px, -3px);
     filter: brightness(0) saturate(100%) invert(38%) sepia(97%) saturate(2000%) hue-rotate(2deg) brightness(103%) contrast(105%);
 }
 
-.button:hover::after {
-    transform: scaleX(1);
+.button:hover::after { transform: scaleX(1); }
+
+/* inverted button (used on dark backgrounds) */
+.button.aro {
+    color: var(--cor-neutra-escuro);
 }
