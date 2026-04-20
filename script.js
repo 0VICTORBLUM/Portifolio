@@ -116,7 +116,7 @@
 
 
 /* ═══════════════════════════════════════════
-   DETALHE — MARQUEE DUPLICAÇÃO
+   DETALHE — MARQUE E DUPLICAÇÃO
 ═══════════════════════════════════════════ */
 (function () {
     const track = document.querySelector('.detalhe .container');
