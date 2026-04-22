@@ -47,61 +47,6 @@
     document.addEventListener('mouseenter', () => cursor.style.opacity = '1');
 })();
 
-
-/* ═══════════════════════════════════════════
-   HERO CANVAS — linhas orgânicas animadas
-═══════════════════════════════════════════ */
-(function () {
-    const canvas = document.getElementById('hero-canvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    let W, H, lines = [];
-
-    function resize() {
-        W = canvas.width  = canvas.offsetWidth;
-        H = canvas.height = canvas.offsetHeight;
-        buildLines();
-    }
-
-    function buildLines() {
-        lines = [];
-        const count = 7;
-        for (let i = 0; i < count; i++) {
-            lines.push({
-                y: H * (i / (count - 1)) * 0.9 + H * 0.05,
-                amplitude: 30 + Math.random() * 50,
-                frequency: 0.003 + Math.random() * 0.003,
-                speed: 0.0003 + Math.random() * 0.0004,
-                phase: Math.random() * Math.PI * 2,
-                opacity: 0.08 + Math.random() * 0.12,
-            });
-        }
-    }
-
-    let t = 0;
-    function draw() {
-        ctx.clearRect(0, 0, W, H);
-        lines.forEach(l => {
-            ctx.beginPath();
-            ctx.strokeStyle = `rgba(28,28,28,${l.opacity})`;
-            ctx.lineWidth = 1;
-            for (let x = 0; x <= W; x += 4) {
-                const y = l.y + Math.sin(x * l.frequency + t * l.speed * 1000 + l.phase) * l.amplitude
-                              + Math.sin(x * l.frequency * 2.3 + t * l.speed * 800) * (l.amplitude * 0.3);
-                x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-            }
-            ctx.stroke();
-        });
-        t++;
-        requestAnimationFrame(draw);
-    }
-
-    window.addEventListener('resize', resize);
-    resize();
-    draw();
-})();
-
-
 /* ═══════════════════════════════════════════
    HERO — WORD SPLIT ANIMATION
 ═══════════════════════════════════════════ */
@@ -139,7 +84,7 @@
     if (!header) return;
     window.addEventListener('scroll', () => {
         if (window.scrollY > 60) {
-            header.style.backgroundColor = 'rgba(245,240,232,0.85)';
+            header.style.backgroundColor = 'rgba(248, 248, 248, 0.85)';
             header.style.backdropFilter = 'blur(12px)';
             header.style.webkitBackdropFilter = 'blur(12px)';
         } else {
