@@ -1,10 +1,11 @@
 :root {
     --cor-principal: #FF4E02;
-    --cor-secudaria: #F48859;
+    --cor-secundaria: #F48859;
     --cor-neutra-escuro: #1c1c1c;
     --cor-neutra-claro: #FAFAFA;
     --complementar-c1: #3D3D3D;
     --complementar-c2: #9E9E9E;
+    --complementar-c3: #dfdfdf;
 }
 
 .cor-principal {
