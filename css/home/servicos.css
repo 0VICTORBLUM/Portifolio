@@ -20,89 +20,96 @@
     color: var(--complementar-c1);
 }
 
-/* Stack com sticky */
+/* Stack com sticky - Padronizado para fundo escuro */
 .card-servicos-bg {
     position: sticky;
     top: 80px;
-    border-top: 1px solid var(--cor-neutra-escuro);
-    background-color: var(--cor-neutra-claro);
+    border-top: 1px solid var(--complementar-c1);
+    background-color: var(--cor-neutra-escuro); /* Fundo escuro padrão */
     padding: 64px 0 80px;
-    display: grid;
-    grid-template-rows: 1fr auto;
+    display: flex;
+    flex-direction: column;
     min-height: 420px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     z-index: 2;
+    color: var(--cor-neutra-claro); /* Texto claro padrão */
+    border-color: var(--cor-neutra-escuro);
 }
 
 .card-servicos-bg:first-of-type {
     top: 80px;
     z-index: 2;
-    background-color: var(--cor-neutra-claro);
 }
 
 .card-servicos-bg:last-of-type {
     top: 130px;
     z-index: 3;
-    background-color: #eee8df;
 }
 
+/* Hover: Fundo claro com bordas e textos escuros */
 .card-servicos-bg:hover {
-    background-color: #e8e2d8;
+    background-color: var(--cor-neutra-claro);
+    color: var(--cor-neutra-escuro);
+    border-color: var(--cor-neutra-escuro);
 }
 
 .card-servicos-bg > .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    gap: 16px 80px;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start; /* Alinhado à esquerda */
+    text-align: left;
 }
 
 .card-servicos-bg > .container h4 {
     margin: 0;
-    grid-column: 1;
-    color: var(--cor-neutra-escuro);
-    max-width: 400px;
+    color: inherit; /* Segue a cor do pai */
+    max-width: 600px;
 }
 
 .card-servicos-bg > .container .font-body {
     margin: 0;
-    grid-column: 2;
-    grid-row: 1 / 3;
-    color: var(--complementar-c1);
-    align-self: start;
+    color: inherit;
+    max-width: 700px;
     font-size: 1rem;
     line-height: 1.7;
+    opacity: 0.9;
 }
 
 .card-servicos-bg > .container h3 {
     margin: 0;
-    grid-column: 1;
     color: var(--cor-principal);
     font-size: 1.1rem;
+    order: -1; /* Título pequeno acima do H4 se necessário, ou mantenha a ordem do HTML */
 }
 
 .card-servicos-bg > .container .button {
-    grid-column: 1;
-    margin-top: 32px;
+    margin-top: 12px;
+    color: inherit;
+}
+
+/* Botão mantém hover original independente do fundo */
+.card-servicos-bg .button:hover {
+    color: var(--cor-principal) !important;
 }
 
 .card-servicos-bg > .font-display {
+    position: absolute;
+    bottom: 40px;
+    right: 80px;
     margin: 0;
-    color: var(--cor-neutra-escuro);
-    opacity: 0.06;
+    color: inherit;
+    opacity: 0.15;
     font-size: clamp(4rem, 10vw, 9rem);
     text-align: right;
-    padding-right: 0;
     line-height: 1;
-    padding-top: 24px;
 }
 
 /* scroll-reveal */
 .card-servicos-bg {
     opacity: 0;
     transform: translateY(60px);
-    transition: opacity 0.7s ease, transform 0.7s ease, background-color 0.3s ease;
+    transition: opacity 0.7s ease, transform 0.7s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .card-servicos-bg.visible {
@@ -112,16 +119,17 @@
 
 @media (max-width: 768px) {
     .card-servicos-bg > .container {
-        grid-template-columns: 1fr;
         gap: 16px;
-    }
-
-    .card-servicos-bg > .container .font-body {
-        grid-column: 1;
-        grid-row: auto;
     }
 
     .card-servicos-bg {
         position: static;
+        padding: 48px 0;
+    }
+
+    .card-servicos-bg > .font-display {
+        position: static;
+        padding-top: 24px;
+        padding-right: 24px;
     }
 }
