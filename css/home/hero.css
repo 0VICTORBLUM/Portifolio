@@ -6,7 +6,7 @@
     grid-template-areas:
         "tag    ."
         "title  title"
-        ".    meta";
+        "meta    .";
     align-items: end;
     padding-top: 80px;
     padding-bottom: 80px;
@@ -32,7 +32,6 @@
     align-items: flex-end;
     gap: 24px;
     max-width: 420px;
-    margin-left: auto;
 }
 
 .hero-meta > .font-body {

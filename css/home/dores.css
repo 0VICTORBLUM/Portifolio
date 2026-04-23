@@ -23,15 +23,15 @@
     overflow: hidden;
     transition: transform 0.2s ease, background-color 0.2s ease;
     transform-origin: left;
-    border: solid 2px var(--complementar-c3);
-    border-radius: 4px;
+    border: solid 2px var(--cor-neutra-escuro);
+    border-radius: 12px;
 }
 
 .card-dor1:hover,
 .card-dor2:hover,
 .card-dor3:hover {
     transform: translateY(-4px);
-    background-color: var(--complementar-c3);
+    background-color: var(--cor-neutra-escuro);
 }
 
 .card-dor1 .font-h4,
