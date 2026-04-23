@@ -48,7 +48,7 @@ img {
     .container { margin: 0 40px; }
 }
 @media (max-width: 375px) {
-    .container { margin: 0 36px; }
+    .container { margin: 0 20px; }
 }
 
 .titulo {

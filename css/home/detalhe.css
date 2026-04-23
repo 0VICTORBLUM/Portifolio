@@ -11,14 +11,13 @@
     gap: 48px;
     white-space: nowrap;
     margin: 0;
-    padding: 20px 0;
+    padding: 12px 0;
     animation: marquee 18s linear infinite;
     width: max-content;
 }
 
 .detalhe .container .font-body {
     margin: 0;
-    font: 700 1.1rem/1 "syne", sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--cor-neutra-escuro);
