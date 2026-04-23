@@ -7,7 +7,7 @@
     Object.assign(cursor.style, {
         position: 'fixed', top: '0', left: '0',
         width: '12px', height: '12px',
-        backgroundColor: '#FF4E02',
+        backgroundColor: 'rgba(255, 78, 2, 0.5)', // Laranja com transparência
         borderRadius: '50%',
         pointerEvents: 'none',
         zIndex: '99999',
@@ -61,7 +61,7 @@
 
 
 /* ═══════════════════════════════════════════
-   DETALHE — MARQUE E DUPLICAÇÃO
+   DETALHE — MARQUEE DUPLICAÇÃO
 ═══════════════════════════════════════════ */
 (function () {
     const track = document.querySelector('.detalhe .container');
@@ -84,7 +84,7 @@
     if (!header) return;
     window.addEventListener('scroll', () => {
         if (window.scrollY > 60) {
-            header.style.backgroundColor = 'rgba(248, 248, 248, 0.85)';
+            header.style.backgroundColor = 'rgba(242,242,242,0.85)'; // Usando cor neutra clara do :root
             header.style.backdropFilter = 'blur(12px)';
             header.style.webkitBackdropFilter = 'blur(12px)';
         } else {
