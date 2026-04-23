@@ -51,6 +51,10 @@ img {
     .container { margin: 0 36px; }
 }
 
+.titulo {
+    margin-bottom: 40px;
+}
+
 /* ──────────────── BUTTON GLOBAL ──────────────── */
 
 .button {

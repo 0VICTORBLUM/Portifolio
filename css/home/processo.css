@@ -8,37 +8,50 @@
     color: var(--cor-neutra-escuro);
 }
 
-/* Each step card — same sticky-stack pattern as services */
+/* Each step card — Padronizado para fundo escuro */
 .passo-1,
 .passo-2,
 .passo-3,
 .passo-4,
 .passo-5 {
     position: sticky;
-    border-top: 1px solid var(--cor-neutra-escuro);
-    padding: 56px 0 72px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-    gap: 0 80px;
+    border-top: 1px solid var(--complementar-c1);
+    padding: 64px 0 80px;
+    display: flex;
+    flex-direction: column;
     min-height: 260px;
-    background-color: var(--cor-neutra-claro);
+    background-color: var(--cor-neutra-escuro);
     z-index: 2;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    color: var(--cor-neutra-claro);
 }
 
 .passo-1 { top: 80px;  z-index: 2; }
-.passo-2 { top: 108px; z-index: 3; background-color: #eee8df; }
-.passo-3 { top: 136px; z-index: 4; background-color: #e8e2d8; }
-.passo-4 { top: 164px; z-index: 5; background-color: #e2dcd1; }
-.passo-5 { top: 192px; z-index: 6; background-color: #dbd5c9; }
+.passo-2 { top: 108px; z-index: 3; }
+.passo-3 { top: 136px; z-index: 4; }
+.passo-4 { top: 164px; z-index: 5; }
+.passo-5 { top: 192px; z-index: 6; }
+
+/* Hover: Fundo claro com bordas e textos escuros */
+.passo-1:hover,
+.passo-2:hover,
+.passo-3:hover,
+.passo-4:hover,
+.passo-5:hover {
+    background-color: var(--cor-neutra-claro);
+    color: var(--cor-neutra-escuro);
+    border-top-color: var(--cor-neutra-escuro);
+}
 
 .passo-1 .container,
 .passo-2 .container,
 .passo-3 .container,
 .passo-4 .container,
 .passo-5 .container {
-    display: contents;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
 }
 
 .passo-1 h3,
@@ -47,10 +60,8 @@
 .passo-4 h3,
 .passo-5 h3 {
     margin: 0;
-    color: var(--cor-neutra-escuro);
-    grid-column: 1;
-    align-self: center;
-    padding-left: 80px;
+    color: inherit;
+    max-width: 500px;
 }
 
 .passo-1 .font-body,
@@ -59,11 +70,11 @@
 .passo-4 .font-body,
 .passo-5 .font-body {
     margin: 0;
-    color: var(--complementar-c1);
-    grid-column: 2;
+    color: inherit;
     font-size: 1rem;
     line-height: 1.7;
-    padding-right: 80px;
+    max-width: 600px;
+    opacity: 0.9;
 }
 
 .passo-1 .font-display,
@@ -71,14 +82,15 @@
 .passo-3 .font-display,
 .passo-4 .font-display,
 .passo-5 .font-display {
+    position: absolute;
+    bottom: 40px;
+    right: 80px;
     margin: 0;
-    grid-column: 1 / -1;
     text-align: right;
     font-size: clamp(3rem, 7vw, 6rem);
-    opacity: 0.06;
+    opacity: 0.15;
     line-height: 0.9;
-    color: var(--cor-neutra-escuro);
-    padding: 24px 80px 0 0;
+    color: inherit;
 }
 
 /* scroll-reveal */
@@ -89,7 +101,7 @@
 .passo-5 {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.65s ease, transform 0.65s ease, background-color 0.3s ease;
+    transition: opacity 0.65s ease, transform 0.65s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .passo-1.visible,
@@ -101,36 +113,23 @@
     transform: translateY(0);
 }
 
-.passo-2 { transition-delay: 0.08s, 0.08s, 0s; }
-.passo-3 { transition-delay: 0.16s, 0.16s, 0s; }
-.passo-4 { transition-delay: 0.24s, 0.24s, 0s; }
-.passo-5 { transition-delay: 0.32s, 0.32s, 0s; }
-
 @media (max-width: 768px) {
     .passo-1,
     .passo-2,
     .passo-3,
     .passo-4,
     .passo-5 {
-        grid-template-columns: 1fr;
         position: static;
-        padding: 40px 0;
+        padding: 48px 0;
     }
 
-    .passo-1 h3,
-    .passo-2 h3,
-    .passo-3 h3,
-    .passo-4 h3,
-    .passo-5 h3 {
-        padding-left: 24px;
-    }
-
-    .passo-1 .font-body,
-    .passo-2 .font-body,
-    .passo-3 .font-body,
-    .passo-4 .font-body,
-    .passo-5 .font-body {
-        grid-column: 1;
-        padding: 0 24px;
+    .passo-1 .font-display,
+    .passo-2 .font-display,
+    .passo-3 .font-display,
+    .passo-4 .font-display,
+    .passo-5 .font-display {
+        position: static;
+        padding-top: 24px;
+        padding-right: 24px;
     }
 }
