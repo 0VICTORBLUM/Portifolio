@@ -3,26 +3,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
-    gap: 0 80px;
     align-items: start;
     border-top: 1px solid var(--cor-neutra-escuro);
     margin-top: 0;
 }
 
-.sobre h1 {
-    margin: 0 0 40px;
-    color: var(--cor-neutra-escuro);
-    grid-column: 1;
-    max-width: 480px;
-}
 
 .sobre .font-body {
     margin: 0;
     color: var(--complementar-c1);
-    grid-column: 1;
-    font-size: 1rem;
-    line-height: 1.8;
     white-space: pre-line;
+    margin-right: 40px;
 }
 
 .sobre .button {
