@@ -1,66 +1,75 @@
 .contato {
     padding: 120px 0;
     border-top: 1px solid var(--cor-neutra-escuro);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
 }
 
-.contato > h1 {
-    margin: 0 0 16px;
+.contato-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contato h1 {
+    margin: 0;
     color: var(--cor-neutra-escuro);
 }
 
-.contato > .font-body {
-    margin: 0 0 64px;
+.contato .font-body {
+    margin: 0;
     color: var(--complementar-c1);
 }
 
 .contatos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-direction: column; /* Cards um abaixo do outro */
     gap: 1px;
     background-color: var(--cor-neutra-escuro);
     border: 1px solid var(--cor-neutra-escuro);
 }
 
 .contatos > div {
-    background-color: var(--cor-neutra-claro);
-    padding: 40px 32px 48px;
+    background-color: var(--cor-neutra-escuro); /* Invertido para padrão escuro */
+    padding: 32px;
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: row; /* Layout horizontal para os cards */
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     position: relative;
+    color: var(--cor-neutra-claro);
 }
 
 .contatos > div:hover {
-    background-color: var(--cor-neutra-escuro);
-    transform: translateY(-4px);
+    background-color: var(--cor-neutra-claro);
+    color: var(--cor-neutra-escuro);
+}
+
+.contato-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .contatos > div h4 {
     margin: 0;
-    color: var(--cor-neutra-escuro);
-    transition: color 0.2s ease;
+    color: inherit;
     font-size: 1.1rem;
-}
-
-.contatos > div:hover h4 {
-    color: var(--cor-neutra-claro);
 }
 
 .contatos > div .font-body {
     margin: 0;
-    color: var(--complementar-c2);
+    color: inherit;
+    opacity: 0.7;
     font-size: 0.9rem;
-    transition: color 0.2s ease;
-}
-
-.contatos > div:hover .font-body {
-    color: var(--complementar-c2);
 }
 
 .contatos > div span {
-    margin-top: auto;
     display: flex;
     align-items: center;
 }
@@ -69,18 +78,19 @@
     width: 16px;
     height: 16px;
     transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0) invert(1); /* Seta branca no fundo escuro */
 }
 
 .contatos > div:hover span img {
     transform: translate(3px, -3px);
-    filter: brightness(0) invert(1);
+    filter: none; /* Seta escura no fundo claro */
 }
 
 /* scroll-reveal */
 .contatos > div {
     opacity: 0;
     transform: translateY(24px);
-    transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.2s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .contatos > div.visible {
@@ -88,18 +98,9 @@
     transform: translateY(0);
 }
 
-.contatos > div:nth-child(2) { transition-delay: 0.08s, 0.08s, 0s, 0s; }
-.contatos > div:nth-child(3) { transition-delay: 0.16s, 0.16s, 0s, 0s; }
-.contatos > div:nth-child(4) { transition-delay: 0.24s, 0.24s, 0s, 0s; }
-
 @media (max-width: 768px) {
-    .contatos {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 375px) {
-    .contatos {
+    .contato {
         grid-template-columns: 1fr;
+        gap: 48px;
     }
 }
