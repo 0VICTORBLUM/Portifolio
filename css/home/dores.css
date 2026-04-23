@@ -14,16 +14,16 @@
 .card-dor1,
 .card-dor2,
 .card-dor3 {
-    background-color: var(--cor-neutra-claro);
+    background-color: var(--cor-neutra-escuro);
     padding: 48px 40px 56px;
     display: flex;
     flex-direction: column;
     gap: 24px;
     position: relative;
     overflow: hidden;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    transition: transform 0.5s ease, background-color 0.5s ease, color 0.3s ease;
     transform-origin: left;
-    border: solid 2px var(--cor-neutra-escuro);
+    color: var(--cor-neutra-claro);
     border-radius: 12px;
 }
 
@@ -31,14 +31,16 @@
 .card-dor2:hover,
 .card-dor3:hover {
     transform: translateY(-4px);
-    background-color: var(--cor-neutra-escuro);
+    background-color: var(--cor-neutra-claro); 
+    color: var(--cor-neutra-escuro);
+    border: solid 2px var(--cor-neutra-escuro);
 }
 
 .card-dor1 .font-h4,
 .card-dor2 .font-h4,
 .card-dor3 .font-h4 {
     margin: 0;
-    color: var(--cor-neutra-escuro);
+    color: inherit;
     max-width: 360px;
 }
 
@@ -46,10 +48,11 @@
 .card-dor2 .font-body,
 .card-dor3 .font-body {
     margin: 0;
-    color: var(--complementar-c1);
+    color: inherit;
     flex: 1;
     font-size: 1rem;
     line-height: 1.6;
+    opacity: 0.9;
 }
 
 .card-dor1 .font-display,
@@ -59,8 +62,8 @@
     margin-top: auto;
     font-size: 5rem;
     line-height: 1;
-    color: var(--complementar-c2);
-    opacity: 0.3;
+    color: inherit;
+    opacity: 0.15;
     letter-spacing: -0.04em;
 }
 
@@ -70,7 +73,7 @@
 .card-dor3 {
     opacity: 0;
     transform: translateX(-40px);
-    transition: opacity 0.6s ease, transform 0.6s ease, background-color 0.2s ease;
+    transition: opacity 0.6s ease, transform 0.6s ease, background-color 0.2s ease, color 0.3s ease;
 }
 
 .card-dor1.visible,
