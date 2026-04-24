@@ -4,12 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Victor Blum — Desenvolvedor & Designer UX/UI</title>
-    <meta name="description" content="Especialista em landing pages e sites institucionais que transformam visitantes em clientes reais.">
+    <meta name="description" content="Desenvolvedor Frontend e Designer UX/UI especializado em criar interfaces de alto impacto e performance. Transformo ideias em experiências digitais eficientes. Conheça meu portfólio.">
+    <meta name="keywords" content="web design, landing page, site institucional, UX/UI design, desenvolvedor web, porto alegre">
+    <meta name="author" content="Victor Blum">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://victorblum.dev">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    </noscript>
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/utilitarios/mobile.css">
@@ -21,13 +30,13 @@
         <!-- ═══ HEADER ═══ -->
         <header>
             <div class="container header-bg">
-                <p class="font-menus"><a href="#home">Victor Blum</a></p>
+                <p class="font-menus"><a href="#home" title="Voltar ao topo">Victor Blum</a></p>
                 <div class="menus-header">
-                    <nav class="desktop-nav">
+                    <nav class="desktop-nav" aria-label="Navegação principal">
                         <ul>
-                            <li><a href="#sobre" class="font-menus">Sobre</a></li>
-                            <li><a href="#servicos" class="font-menus">Serviços</a></li>
-                            <li><a href="#contato" class="font-menus">Contato</a></li>
+                            <li><a href="#sobre" class="font-menus" title="Conheça mais sobre mim">Sobre</a></li>
+                            <li><a href="#servicos" class="font-menus" title="Veja meus serviços">Serviços</a></li>
+                            <li><a href="#contato" class="font-menus" title="Entre em contato comigo" title="Abrir WhatsApp para conversar">Contato</a></li>
                         </ul>
                     </nav>
                     <a href="https://wa.me/5541996309392" class="button" target="_blank" rel="noopener">Conversar <img src="/css/assets/seta.svg" alt=""></a>
@@ -40,7 +49,7 @@
 
         <!-- Mobile Menu Overlay -->
         <div id="mobile-menu">
-            <nav>
+            <nav aria-label="Navegação mobile" role="dialog" aria-hidden="true">
                 <ul>
                     <li><a href="#sobre" class="font-menus">Sobre</a></li>
                     <li><a href="#servicos" class="font-menus">Serviços</a></li>
