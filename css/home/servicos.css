@@ -20,50 +20,63 @@
     color: var(--complementar-c1);
 }
 
-/* Stack com sticky - Padronizado para fundo escuro */
 .card-servicos-bg {
     position: sticky;
     top: 80px;
     border-top: 1px solid var(--complementar-c1);
-    background-color: var(--cor-neutra-escuro); /* Fundo escuro padrão */
+    background-color: var(--cor-neutra-escuro);
     padding: 64px 0 80px;
     display: flex;
     flex-direction: column;
     min-height: 420px;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     z-index: 2;
-    color: var(--cor-neutra-claro); /* Texto claro padrão */
-    border-color: var(--cor-neutra-escuro);
+    color: var(--cor-neutra-claro); 
+    overflow: hidden;
+    transition: opacity 0.7s ease, transform 0.7s ease, color 0.5s ease;
 }
 
-.card-servicos-bg:first-of-type {
-    top: 80px;
-    z-index: 2;
-}
+.card-servicos-bg:first-of-type { top: 80px;  z-index: 2; }
+.card-servicos-bg:last-of-type  { top: 130px; z-index: 3; }
 
-.card-servicos-bg:last-of-type {
-    top: 130px;
-    z-index: 3;
-}
-
-/* Hover: Fundo claro com bordas e textos escuros */
-.card-servicos-bg:hover {
+/* Camada de hover radial — fica por cima do bg, abaixo do conteúdo */
+.card-servicos-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
     background-color: var(--cor-neutra-claro);
     color: var(--cor-neutra-escuro);
-    border-color: var(--cor-neutra-escuro);
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path 0.7s ease, opacity 0.7s ease, color 0.5s ease;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.card-servicos-bg:hover::before {
+    clip-path: circle(150% at var(--mouse-x, 50%) var(--mouse-y, 50%));
+}
+
+/* Conteúdo acima da camada radial */
+.card-servicos-bg > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Cor do texto muda junto com o hover — via classe JS */
+.card-servicos-bg.hovered {
+    color: var(--cor-neutra-escuro);
 }
 
 .card-servicos-bg > .container {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    align-items: flex-start; /* Alinhado à esquerda */
+    align-items: flex-start;
     text-align: left;
 }
 
 .card-servicos-bg > .container h4 {
     margin: 0;
-    color: inherit; /* Segue a cor do pai */
+    color: inherit;
     max-width: 600px;
 }
 
@@ -80,7 +93,6 @@
     margin: 0;
     color: var(--cor-principal);
     font-size: 1.1rem;
-    order: -1; /* Título pequeno acima do H4 se necessário, ou mantenha a ordem do HTML */
 }
 
 .card-servicos-bg > .container .button {
@@ -88,11 +100,11 @@
     color: inherit;
 }
 
-/* Botão mantém hover original independente do fundo */
 .card-servicos-bg .button:hover {
     color: var(--cor-principal) !important;
 }
 
+/* Número — posicionado absoluto dentro do card (card tem position relative herdado do sticky) */
 .card-servicos-bg > .font-display {
     position: absolute;
     bottom: 40px;
@@ -101,7 +113,6 @@
     color: inherit;
     opacity: 0.15;
     font-size: clamp(4rem, 10vw, 9rem);
-    text-align: right;
     line-height: 1;
 }
 
@@ -109,7 +120,6 @@
 .card-servicos-bg {
     opacity: 0;
     transform: translateY(60px);
-    transition: opacity 0.7s ease, transform 0.7s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .card-servicos-bg.visible {
@@ -118,18 +128,19 @@
 }
 
 @media (max-width: 768px) {
-    .card-servicos-bg > .container {
-        gap: 16px;
+    .card-servicos-bg {
+        /* mantém sticky no mobile — apenas ajusta top e min-height */
+        top: 64px;
+        min-height: unset;
+        padding: 40px 0 52px;
     }
 
-    .card-servicos-bg {
-        position: static;
-        padding: 48px 0;
-    }
+    .card-servicos-bg:first-of-type { top: 64px; }
+    .card-servicos-bg:last-of-type  { top: 88px; }
 
     .card-servicos-bg > .font-display {
-        position: static;
-        padding-top: 24px;
-        padding-right: 24px;
+        right: 24px;
+        bottom: 16px;
+        font-size: clamp(3rem, 15vw, 5rem);
     }
 }
