@@ -30,7 +30,7 @@
     display: flex;
     flex-direction: column;
     min-height: 420px;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    transition: all 0.6s ease;
     z-index: 2;
     color: var(--cor-neutra-claro); /* Texto claro padrão */
     border-color: var(--cor-neutra-escuro);
@@ -109,7 +109,7 @@
 .card-servicos-bg {
     opacity: 0;
     transform: translateY(60px);
-    transition: opacity 0.7s ease, transform 0.7s ease, background-color 0.3s ease, color 0.3s ease;
+    transition: all 0.6s ease;
 }
 
 .card-servicos-bg.visible {
