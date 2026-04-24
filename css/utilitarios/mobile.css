@@ -68,7 +68,7 @@
 }
 
 .mobile-menu-cta {
-    border-top: 1px solid var(--complementar-c1);
+    /* border-top: 1px solid var(--complementar-c1); */
     padding-top: 24px;
     transition: color 0.2s ease;
 }
@@ -81,10 +81,6 @@
     .hamburger   { display: flex; }
 
     .menus-header > .button { display: none; }
-
-    .hero-bg {
-        min-height: calc(100vh - 64px);
-    }
 
     .Dores.container {
         margin: 0;

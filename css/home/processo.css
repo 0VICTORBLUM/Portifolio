@@ -15,7 +15,6 @@
 .passo-4,
 .passo-5 {
     position: sticky;
-    border-top: 1px solid var(--complementar-c1);
     padding: 64px 0 80px;
     display: flex;
     flex-direction: column;
@@ -91,6 +90,7 @@
     opacity: 0.15;
     line-height: 0.9;
     color: inherit;
+    pointer-events: none;
 }
 
 /* scroll-reveal */
@@ -119,9 +119,15 @@
     .passo-3,
     .passo-4,
     .passo-5 {
-        position: static;
+        position: sticky;
         padding: 48px 0;
     }
+    
+    .passo-1 { top: 60px; }
+    .passo-2 { top: 80px; }
+    .passo-3 { top: 100px; }
+    .passo-4 { top: 120px; }
+    .passo-5 { top: 140px; }
 
     .passo-1 .font-display,
     .passo-2 .font-display,

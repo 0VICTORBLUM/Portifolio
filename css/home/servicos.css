@@ -95,7 +95,7 @@
 
 .card-servicos-bg > .font-display {
     position: absolute;
-    bottom: 40px;
+    bottom: 20px;
     right: 80px;
     margin: 0;
     color: inherit;
@@ -103,6 +103,7 @@
     font-size: clamp(4rem, 10vw, 9rem);
     text-align: right;
     line-height: 1;
+    pointer-events: none;
 }
 
 /* scroll-reveal */
@@ -123,8 +124,13 @@
     }
 
     .card-servicos-bg {
-        position: static;
+        position: sticky; /* Mantém sticky no mobile */
+        top: 60px; /* Ajuste para o header mobile */
         padding: 48px 0;
+    }
+
+    .card-servicos-bg:last-of-type {
+        top: 100px;
     }
 
     .card-servicos-bg > .font-display {
