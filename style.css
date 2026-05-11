@@ -312,7 +312,7 @@ main {
     margin: 0;
     padding: 12px 0;
     animation: marquee 18s linear infinite;
-    width: 100%;
+    width: 100vw;
 }
 
 .detalhe .container .font-body3 {
@@ -333,6 +333,7 @@ main {
     from { transform: translateX(0); }
     to   { transform: translateX(-50%); }
 }
+
 
 .Dores {
     padding: 120px 0;
