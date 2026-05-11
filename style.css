@@ -312,6 +312,7 @@ main {
     margin: 0;
     padding: 12px 0;
     animation: marquee 18s linear infinite;
+    width: 100%;
 }
 
 .detalhe .container .font-body3 {
@@ -331,19 +332,6 @@ main {
 @keyframes marquee {
     from { transform: translateX(0); }
     to   { transform: translateX(-50%); }
-}
-@media (max-width: 768px) {
-    .detalhe {
-        padding: 12px 0;
-        overflow-x: hidden; 
-    }
-
-    .detalhe .container {
-        width: 100%;        
-        padding: 0 24px;    
-        gap: 24px;         
-        /* animation: none;    */
-    }
 }
 
 .Dores {
