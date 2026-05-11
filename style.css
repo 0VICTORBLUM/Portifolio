@@ -298,10 +298,15 @@ main {
 }
 
 /* detalhe */
+/* ======================================
+   MARQUEE - DETALHE SECTION
+   ====================================== */
+
 .detalhe {
     background-color: var(--cor-neutra-escuro);
     overflow: hidden;
     padding: 12px;
+    width: 100%;
 }
 
 .detalhe .container {
@@ -311,8 +316,10 @@ main {
     white-space: nowrap;
     margin: 0;
     padding: 12px 0;
-    animation: marquee 18s linear infinite;
-    width: 100vw;
+    width: 100%;
+    
+    /* Duplica o conteúdo - importante para seamless loop */
+    animation: marquee 20s linear infinite;
 }
 
 .detalhe .container .font-body3 {
@@ -321,6 +328,7 @@ main {
     letter-spacing: 0.08em;
     color: var(--cor-neutra-claro);
     flex-shrink: 0;
+    font-size: clamp(0.75rem, 2vw, 1rem);
 }
 
 .detalhe .container img {
@@ -329,9 +337,74 @@ main {
     flex-shrink: 0;
 }
 
+/* MOBILE - até 480px */
+@media (max-width: 480px) {
+    .detalhe {
+        padding: 8px;
+    }
+
+    .detalhe .container {
+        gap: 24px;
+        padding: 8px 0;
+        animation: marquee-mobile 16s linear infinite;
+    }
+
+    .detalhe .container .font-body3 {
+        font-size: clamp(0.65rem, 2.5vw, 0.85rem);
+        letter-spacing: 0.05em;
+    }
+
+    .detalhe .container img {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* TABLET - 481px a 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+    .detalhe .container {
+        gap: 32px;
+        animation: marquee 18s linear infinite;
+    }
+
+    .detalhe .container .font-body3 {
+        font-size: clamp(0.75rem, 2vw, 0.9rem);
+    }
+}
+
+/* DESKTOP - acima de 768px */
+@media (min-width: 769px) {
+    .detalhe {
+        padding: 12px;
+    }
+
+    .detalhe .container {
+        gap: 48px;
+        animation: marquee 20s linear infinite;
+    }
+
+    .detalhe .container .font-body3 {
+        font-size: 1rem;
+    }
+}
+
+/* KEYFRAMES - Velocidades ajustadas por dispositivo */
 @keyframes marquee {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes marquee-mobile {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 
