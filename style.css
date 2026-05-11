@@ -318,9 +318,7 @@ main {
     margin: 0;
     padding: 12px 0;
     width: 100%;
-    
-    /* Duplica o conteúdo - importante para seamless loop */
-    animation: marquee 25s linear infinite;
+    animation: marquee 8s linear infinite;
 }
 
 .detalhe .container .font-body3 {
@@ -347,7 +345,7 @@ main {
     .detalhe .container {
         gap: 24px;
         padding: 8px 0;
-        animation: marquee-mobile 20s linear infinite;
+        animation: marquee-mobile 8s linear infinite;
     }
 
     .detalhe .container .font-body3 {
@@ -365,7 +363,7 @@ main {
 @media (min-width: 481px) and (max-width: 768px) {
     .detalhe .container {
         gap: 32px;
-        animation: marquee 20s linear infinite;
+        animation: marquee 8s linear infinite;
     }
 
     .detalhe .container .font-body3 {
