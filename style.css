@@ -343,7 +343,7 @@ main {
         width: 100%;        
         padding: 0 24px;    
         gap: 24px;         
-        /* animation: none;    */
+        animation: none;   
     }
 }
 
