@@ -307,6 +307,7 @@ main {
     overflow: hidden;
     padding: 12px;
     width: 100%;
+    position: relative
 }
 
 .detalhe .container {
@@ -319,7 +320,7 @@ main {
     width: 100%;
     
     /* Duplica o conteúdo - importante para seamless loop */
-    animation: marquee 20s linear infinite;
+    animation: marquee 25s linear infinite;
 }
 
 .detalhe .container .font-body3 {
@@ -346,7 +347,7 @@ main {
     .detalhe .container {
         gap: 24px;
         padding: 8px 0;
-        animation: marquee-mobile 16s linear infinite;
+        animation: marquee-mobile 20s linear infinite;
     }
 
     .detalhe .container .font-body3 {
@@ -364,7 +365,7 @@ main {
 @media (min-width: 481px) and (max-width: 768px) {
     .detalhe .container {
         gap: 32px;
-        animation: marquee 18s linear infinite;
+        animation: marquee 20s linear infinite;
     }
 
     .detalhe .container .font-body3 {

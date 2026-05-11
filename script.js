@@ -59,23 +59,6 @@
     ).join(' ');
 })();
 
-
-/* ═══════════════════════════════════════════
-   DETALHE — MARQUEE DUPLICAÇÃO
-═══════════════════════════════════════════ */
-(function () {
-    const track = document.querySelector('.detalhe .container');
-    if (!track) return;
-    const clone = track.cloneNode(true);
-    track.parentElement.appendChild(clone);
-    // total width = two tracks, animation runs translateX(-50%)
-    const wrap = track.parentElement;
-    wrap.style.display = 'flex';
-    wrap.style.width = 'max-content';
-    wrap.style.animation = 'marquee 20s linear infinite';
-})();
-
-
 /* ═══════════════════════════════════════════
    NAVBAR — scroll blur
 ═══════════════════════════════════════════ */
