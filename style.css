@@ -312,7 +312,6 @@ main {
     margin: 0;
     padding: 12px 0;
     animation: marquee 18s linear infinite;
-    width: max-content;
 }
 
 .detalhe .container .font-body3 {
@@ -343,7 +342,7 @@ main {
         width: 100%;        
         padding: 0 24px;    
         gap: 24px;         
-        animation: none;   
+        /* animation: none;    */
     }
 }
 
