@@ -83,11 +83,11 @@
     "scroll",
     () => {
       if (window.scrollY > 60) {
-        header.style.backgroundColor = "rgba(255, 0, 0, 0.85)";
+        header.style.backgroundColor = "rgba(28, 28, 28, 0.95)";
         header.style.backdropFilter = "blur(12px)";
         header.style.webkitBackdropFilter = "blur(12px)";
       } else {
-        header.style.backgroundColor = "var(--cor-neutra-escuro)";
+        header.style.backgroundColor = "#1c1c1c";
         header.style.backdropFilter = "none";
         header.style.webkitBackdropFilter = "none";
       }

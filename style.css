@@ -27,6 +27,9 @@
 .complementar-c2 {
   color: var(--complementar-c2);
 }
+.complementar-c3 {
+  color: var(--complementar-c3);
+}
 
 /* fontes */
 .font-display {
@@ -160,7 +163,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--cor-neutra-claro);
+  background-color: var(--cor-neutra-escuro);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -236,6 +239,8 @@ img {
 .button img {
   width: 12px;
   height: 12px;
+  filter: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(0%)
+    hue-rotate(0deg) brightness(100%) contrast(100%);
   transition:
     transform 0.3s ease,
     filter 0.3s ease;
@@ -346,7 +351,7 @@ main {
 
 .hero-meta > .font-body3 {
   margin: 0;
-  color: var(--complementar-c1);
+  color: var(--cor-neutra-claro);
 }
 
 /* ── Word-split entrance ── */
@@ -373,6 +378,8 @@ main {
   padding: 12px;
   width: 100%;
   position: relative;
+  border-top: 1px solid var(--cor-neutra-claro);
+  border-bottom: 1px solid var(--cor-neutra-claro);
 }
 
 .detalhe .container {
@@ -501,6 +508,7 @@ main {
   transform-origin: left;
   color: var(--cor-neutra-claro);
   border-radius: 4px;
+  border: 1px solid var(--cor-neutra-claro);
 }
 
 .card-dor1:hover,
@@ -590,7 +598,7 @@ main {
 
 .servicos > .container h1 {
   margin: 0;
-  color: var(--cor-neutra-escuro);
+  color: var(--cor-neutra-claro);
   max-width: 700px;
 }
 
@@ -612,7 +620,8 @@ main {
   transition: all 0.6s ease;
   z-index: 2;
   color: var(--cor-neutra-claro); /* Texto claro padrão */
-  border-color: var(--cor-neutra-escuro);
+  border-top: 1px solid var(--cor-neutra-claro);
+  border-bottom: 1px solid var(--cor-neutra-claro);
 }
 
 .card-servicos-bg:first-of-type {
@@ -746,6 +755,7 @@ main {
   z-index: 2;
   color: var(--cor-neutra-claro);
   border-radius: 4px12px;
+  border: 1px solid var(--cor-neutra-claro);
 }
 
 .projeto-1:hover,
@@ -769,7 +779,7 @@ main {
   aspect-ratio: 16/10;
   object-fit: cover;
   display: block;
-  border: 1px solid rgba(28, 28, 28, 0.08);
+  border: 1px solid var(--cor-neutra-claro);
   transition: transform 0.4s ease;
 }
 
@@ -831,12 +841,11 @@ main {
 }
 .processo {
   padding: 120px 0 0;
-  background-color: var(--cor-neutra-claro);
+  /* background-color: var(--cor-neutra-claro); */
 }
 
 .processo > h1 {
   margin: 0 0 80px;
-  color: var(--cor-neutra-escuro);
 }
 
 /* Each step card — Padronizado para fundo escuro */
@@ -854,6 +863,8 @@ main {
   z-index: 2;
   transition: all 0.6s ease;
   color: var(--cor-neutra-claro);
+  border-top: 1px solid var(--cor-neutra-claro);
+  border-bottom: 1px solid var(--cor-neutra-claro);
 }
 
 .passo-1 {
@@ -1007,7 +1018,7 @@ main {
 
 .sobre .font-body {
   margin: 0;
-  color: var(--complementar-c1);
+  color: var(--cor-neutra-claro);
   white-space: pre-line;
   margin-right: 40px;
 }
@@ -1126,7 +1137,7 @@ main {
 }
 .contato {
   padding: 120px 0;
-  border-top: 1px solid var(--cor-neutra-escuro);
+  border-top: 1px solid var(--cor-neutra-claro);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
@@ -1141,7 +1152,7 @@ main {
 
 .contato h1 {
   margin: 0;
-  color: var(--cor-neutra-escuro);
+  color: var(--cor-neutra-claro);
 }
 
 .contato .font-body {
@@ -1171,6 +1182,7 @@ main {
     color 0.3s ease;
   position: relative;
   color: var(--cor-neutra-claro);
+  border: 1px solid var(--cor-neutra-claro);
 }
 
 .contatos > div:hover {
@@ -1242,6 +1254,7 @@ footer {
   background-color: var(--cor-neutra-escuro);
   padding: 80px 0 0;
   overflow: hidden;
+  border-top: 1px solid var(--cor-neutra-claro);
 }
 
 .footer-grid {
