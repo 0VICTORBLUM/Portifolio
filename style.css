@@ -153,7 +153,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  cursor: none !important;
 }
 
 html {
@@ -388,7 +387,7 @@ main {
   gap: 48px;
   white-space: nowrap;
   margin: 0;
-  padding: 12px 0;
+  padding: 8px 0;
   width: 100%;
   animation: marquee 8s linear infinite;
 }
@@ -416,7 +415,7 @@ main {
 
   .detalhe .container {
     gap: 24px;
-    padding: 8px 0;
+    padding: 4px 0;
     animation: marquee-mobile 8s linear infinite;
   }
 
@@ -495,7 +494,7 @@ main {
 .card-dor2,
 .card-dor3 {
   background-color: var(--cor-neutra-escuro);
-  padding: 48px 40px 56px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -518,6 +517,32 @@ main {
   background-color: var(--cor-neutra-claro);
   color: var(--cor-neutra-escuro);
   border: solid 1px var(--cor-neutra-escuro);
+}
+
+.card-dor1:hover .button,
+.card-dor2:hover .button,
+.card-dor3:hover .button {
+  color: var(--cor-neutra-escuro);
+}
+
+.card-dor1:hover .button img,
+.card-dor2:hover .button img,
+.card-dor3:hover .button img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%)
+    hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.card-dor1:hover .button:hover,
+.card-dor2:hover .button:hover,
+.card-dor3:hover .button:hover {
+  color: var(--cor-principal);
+}
+
+.card-dor1:hover .button:hover img,
+.card-dor2:hover .button:hover img,
+.card-dor3:hover .button:hover img {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(97%) saturate(2000%)
+    hue-rotate(2deg) brightness(103%) contrast(105%);
 }
 
 .card-dor1 .font-h4,
@@ -611,7 +636,6 @@ main {
 .card-servicos-bg {
   position: sticky;
   top: 80px;
-  border-top: 1px solid var(--complementar-c1);
   background-color: var(--cor-neutra-escuro); /* Fundo escuro padrão */
   padding: 64px 0 80px;
   display: flex;
@@ -714,7 +738,7 @@ main {
   .card-servicos-bg {
     position: sticky; /* Mantém sticky no mobile */
     top: 60px; /* Ajuste para o header mobile */
-    padding: 48px 0;
+    padding: 40px 0;
   }
 
   .card-servicos-bg:last-of-type {
@@ -766,10 +790,30 @@ main {
   border: solid 1px var(--cor-neutra-escuro);
 }
 
-.projeto-1:last-of-type,
-.projeto-2:last-of-type,
-.projeto-3:last-of-type {
-  border-bottom: 1px solid var(--cor-neutra-escuro);
+.projeto-1:hover .button,
+.projeto-2:hover .button,
+.projeto-3:hover .button {
+  color: var(--cor-neutra-escuro);
+}
+
+.projeto-1:hover .button img,
+.projeto-2:hover .button img,
+.projeto-3:hover .button img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%)
+    hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.projeto-1:hover .button:hover,
+.projeto-2:hover .button:hover,
+.projeto-3:hover .button:hover {
+  color: var(--cor-principal);
+}
+
+.projeto-1:hover .button:hover img,
+.projeto-2:hover .button:hover img,
+.projeto-3:hover .button:hover img {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(97%) saturate(2000%)
+    hue-rotate(2deg) brightness(103%) contrast(105%);
 }
 
 .projeto-1 > img,

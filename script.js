@@ -129,7 +129,12 @@
       ".projeto-1, .projeto-2, .projeto-3," +
       ".passo-1, .passo-2, .passo-3, .passo-4, .passo-5," +
       ".sobre h1, .sobre .font-body, .sobre .button, .sobre-skills," +
-      ".contato > h1, .contato > .font-body, .contatos > div",
+      ".contato > h1, .contato > .font-body, .contatos > div," +
+      ".Dores > .titulo h1, .Dores > .titulo .font-body3," +
+      ".servicos > .container h1, .servicos > .container .font-body," +
+      ".projetos > h1, .projetos > .container .font-body3," +
+      ".hero-bg h1, .hero-bg .font-body, .hero-meta .font-body3," +
+      ".processo > h1, .processo > .font-body",
   );
 
   const observer = new IntersectionObserver(
