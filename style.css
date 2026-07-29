@@ -1111,7 +1111,7 @@ main {
   font:
     700 1rem/1 "syne",
     sans-serif;
-  color: var(--cor-neutra-escuro);
+  color: var(--complementar-c3);
 }
 
 .sobre-tool span:last-child {
